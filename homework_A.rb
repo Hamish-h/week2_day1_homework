@@ -18,11 +18,20 @@ class Student
   end
 
 
+  def set_cohort_name(input_name)
+    @student_name = input_name
+  end
 
 
+  def student_talks()
+    return "student talks".class
+  end
 
 
+  def favorite_language(language)
+    return "I love #{language}"
 
+  end
 
 
 
