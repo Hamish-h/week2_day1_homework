@@ -12,20 +12,27 @@ class TestSportsTeam < MiniTest::Test
 
 
   def test_get_team_name
-    team_instance = Team.new("Codeclan", ["player 1", "player2"], "Head Coach")
+    team_instance = Team.new("Codeclan", ["player 1", "player 2"], "Coach name")
     assert_equal("Codeclan", team_instance.get_team_name())
   end
 
+  # def test_get_player_name
+  #   team_instance = Team.new("Codeclan", ["player 1", "player 2"], "Coach name")
+  #   assert_equal("player 1", team_instance.get_player_name())
+  # end
 
-
-
-
-
-
+  def test_get_coach_name
+    team_instance = Team.new("Codeclan", ["player 1", "player 2"], "Coach name")
+    assert_equal("Coach name", team_instance.get_coach_name())
+  end
 
   # Create a setter method to allow the coach's name to be updated.
 
-
+  def test_set_coach_name
+    team_instance = Team.new("Codeclan", ["player 1", "player 2"], "Coach name")
+    team_instance.set_coach_name("Hamish")
+    assert_equal("Hamish", team_instance.get_coach_name())
+  end
 
   # Refactor the class to use attr_reader or attr_accessor instead of your own getter and setter methods.
 
@@ -44,10 +51,6 @@ class TestSportsTeam < MiniTest::Test
 
 
   # Create a method that takes in whether the team has won or lost and updates the points property for a win.
-
-
-
-
 
 
 end
